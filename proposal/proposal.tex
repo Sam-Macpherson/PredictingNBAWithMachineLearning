@@ -1,0 +1,85 @@
+\def\year{2020}\relax
+
+\documentclass[letterpaper]{article} %DO NOT CHANGE THIS
+\usepackage{aaai20}  %Required
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage{graphicx}  %Required
+\usepackage{hyperref} % For hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\frenchspacing  %Required
+\setlength{\pdfpagewidth}{8.5in}  %Required
+\setlength{\pdfpageheight}{11in}  %Required
+\setcounter{secnumdepth}{0}  
+\usepackage{subfigure}
+
+\begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{Predicting the Results of NBA Games Using Machine Learning}
+\author{Sam Macpherson, Konstantin Topaloglou-Mundy, Lazar Vukoje\\
+\{skmacphe, ketopalo, lvukoje\}@uwaterloo.ca\\
+University of Waterloo\\
+Waterloo, ON, Canada\\
+}
+\maketitle
+
+
+%%%%%%%%%. Introduction %%%%%%%%%
+
+\section{Introduction}
+
+In 2019, an average of 15 million people---per finals game---watched Kawhi Leonard and the Toronto Raptors garner their first NBA championship$^1$. The American-based league, at the age of 74, now sits in fourth place among all sports leagues in the world by revenue$^2$. People from all over the world enjoy watching and cheering on their favourite teams, as well as purchasing jerseys and merchandise. But over the last few years, we have seen a rise in a separate---though related---industry: sports betting. With recent legalization efforts in a number of American states, the derivative industry has witnessed enormous support: over \$21 billion in total US handle (amount of money wagered) since 2018$^3$. It goes without saying, then, that the ability to accurately predict sports results---especially with a mainstream league like the NBA---is of high consequence. This paper will describe our efforts to use existing game and player data in order to predict the result of an arbitrary NBA game.
+
+%%%%%%%%%. Related Work %%%%%%%%%
+
+\section{Related Work}
+
+The {\it Related Work} section should cite and summarize 3-5 papers related to the problem you are tackling.   
+
+Here are some examples of citations: \cite{russell2016artificial,gao2016incentivizing,gao2014trick}.  
+
+It is not sufficient to summarize each prior work independently.  You need to describe a coherent story that incorporates all of these prior work together.  Compare and contrast them.  Try to describe a story of how researchers have explored the topic in the past and what progress they have made so far.  
+
+Explain how your work is going to build on these prior work, i.e. how your work is similar to or different from the techniques that have been used.  
+
+The length of this section is typically 1/2 to 1 page.
+\\ \\
+Sources so far:
+\\
+\begin{enumerate}
+\item
+\href{https://www.researchgate.net/publication/312236952_Predicting_the_Outcome_of_NBA_Playoffs_Based_on_the_Maximum_Entropy_Principle}{Predicting the Outcome of NBA Playoffs Based on the Maximum Entropy Principle}
+
+\item \href{https://www.statista.com/statistics/240377/nba-finals-tv-viewership-in-the-united-states/}{https://www.statista.com/statistics/240377/nba-finals-tv-viewership-in-the-united-states/}
+\item \href{https://howmuch.net/articles/sports-leagues-by-revenue}{https://howmuch.net/articles/sports-leagues-by-revenue}
+\item \href{https://www.legalsportsreport.com/sports-betting/revenue/}{https://www.legalsportsreport.com/sports-betting/revenue/}
+
+\end{enumerate}
+\
+%%%%%%%%%. Methodology %%%%%%%%%
+
+\section{Methodology}
+
+In any given NBA matchup, numerous factors come into play to influence the game and its end result. To account for all these factors, we will be obtaining team and player data from website (\href{https://www.basketball-reference.com/}{Basketball Reference}). This data will then be used to train our models. { \it Which algorithms are we using to train the models? Need 2. Why are we using these two? What is the performance of them? }  Finally, we will compare the accuracy of the two techniques using a subset of past NBA games not used for training.
+
+%%%%%%%%%. Results %%%%%%%%%
+
+\section{Results}
+
+Based on the papers we’ve read online, it seems at though none of the models have been able to predict NBA outcomes with an accuracy of much more than 75\%. We do not anticipate to be able to predict outcomes with super high accuracy, but what we do hope to discover is if there is a certain type of algorithm that can train a model that is significantly better at predicting NBA outcomes than others based on the same input data.
+
+%%%%%%%%%. Bibliography %%%%%%%%%
+\newpage
+\bibliographystyle{aaai}
+\bibliography{report}
+
+\end{document}
