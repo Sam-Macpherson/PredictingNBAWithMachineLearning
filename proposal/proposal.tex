@@ -8,12 +8,6 @@
 \usepackage{url}  %Required
 \usepackage{graphicx}  %Required
 \usepackage{hyperref} % For hyperlinks
-\hypersetup{
-    colorlinks=true,
-    linkcolor=cyan,
-    filecolor=magenta,      
-    urlcolor=blue,
-}
 \frenchspacing  %Required
 \setlength{\pdfpagewidth}{8.5in}  %Required
 \setlength{\pdfpageheight}{11in}  %Required
@@ -37,7 +31,7 @@ Waterloo, ON, Canada\\
 
 \section{Introduction}
 
-In 2019, an average of 15 million people---per finals game---watched Kawhi Leonard and the Toronto Raptors garner their first NBA championship$^1$. The American-based league, at the age of 74, now sits in fourth place among all sports leagues in the world by revenue$^2$. People from all over the world enjoy watching and cheering on their favourite teams, as well as purchasing jerseys and merchandise. But over the last few years, we have seen a rise in a separate---though related---industry: sports betting. With recent legalization efforts in a number of American states, the derivative industry has witnessed enormous support: over \$21 billion in total US handle (amount of money wagered) since 2018$^3$. It goes without saying, then, that the ability to accurately predict sports results---especially with a mainstream league like the NBA---is of high consequence. This paper will describe our efforts to use existing game and player data in order to predict the result of an arbitrary NBA game.
+In recent years, the NBA has been extending its reach and attracting an increasingly larger and diverse audience. NBA games are viewable in many nations across the globe, and in the 2014-2015 season, the league featured 92 international players, hailing from 39 different countries \cite{jones2016predicting}. In 2019, an average of 15 million people---per finals game---watched Kawhi Leonard and the Toronto Raptors garner their first NBA championship \cite{gough_2019}. The American-based league, at the age of 74, now sits in fourth place among all sports leagues in the world by revenue \cite{amoros_2016}. People from all over the world enjoy watching and cheering on their favourite teams, and as the NBA increases its global presence, we see an equal increase in the revenue the league pulls, not just from broadcasts, but from fans purchasing jerseys and other merchandise as well. Over the last few years, we have seen a rise in a separate---though related---industry: sports betting. On May 14, 2018, the federal ban that was in place in the United States which prohibited betting on the outcomes of sporting events was lifted, leaving states free to decide to pass legislation to legalize sports betting \cite{licata_2019}. Since the ruling, 11 states have legalized sports betting---amoung them Nevada, Oregon, New York---and an additional 24 states are in the process of passing legislation \cite{licata_2019}. With the recent legalization efforts, the derivative industry has witnessed enormous support: over \$21 billion in total US handle (amount of money wagered) since 2018 \cite{legal_sports_report}. It goes without saying, then, that the ability to accurately predict sports results---especially with a mainstream league like the NBA---can be highly lucrative. This paper will describe our efforts to use existing game and player data in order to predict the result of future, arbitrary NBA games. We will focus on training a machine learning model using a season's worth of data as the input features. With high variance in team composition and individual player ability within the NBA from year to year, we believe it prudent to limit the input features to a single season, and use a model trained by such features to predict games from the playoffs for that season. We will take into account team statistics such as points per game, field goal percentage and turnovers. It is important to note that many other---sometimes abstract---outside factors can impact the result of a game, such as the ``home court advantage". To limit the scope of this project, we will limit our analysis to concrete statistics.
 
 %%%%%%%%%. Related Work %%%%%%%%%
 
@@ -45,7 +39,6 @@ In 2019, an average of 15 million people---per finals game---watched Kawhi Leona
 
 The {\it Related Work} section should cite and summarize 3-5 papers related to the problem you are tackling.   
 
-Here are some examples of citations: \cite{russell2016artificial,gao2016incentivizing,gao2014trick}.  
 
 It is not sufficient to summarize each prior work independently.  You need to describe a coherent story that incorporates all of these prior work together.  Compare and contrast them.  Try to describe a story of how researchers have explored the topic in the past and what progress they have made so far.  
 
