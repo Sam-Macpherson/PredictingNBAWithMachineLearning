@@ -37,38 +37,21 @@ In recent years, the NBA has been extending its reach and attracting an increasi
 
 \section{Related Work}
 
-The {\it Related Work} section should cite and summarize 3-5 papers related to the problem you are tackling.   
+The selection of variables that contribute to a basketball game has been a primary element of study in related work on this topic. The research conducted in ``Predicting Outcomes of NBA Basketball Games" (Jones) used over 20 different game statistics as features for their models, as well as four different approaches: 3-game moving average of team stats, 3-game moving median, 3-game moving weighted average, and seasonal averages. One technique of particular interest was that the statistics for a given team would not only include the teams statistics but also include the statistics of opposing teams when they played the team in question. Another interesting technique in this paper was the use of preprocessing on statistics; the author attempted to measure the significance of stats in training the models in order to eliminate statistics that were deemed to be unnecessary or insignificant. However, the author used data from the previous 3 seasons to predict NBA outcomes, which may be a faulty technique because of potentially significant changes to team rosters from season to season. In contrast, 
+the authors \cite{predicting_maximum_entropy} of the paper ``Predicting the Outcome of NBA Playoffs Based on the Maximum Entropy Principle", restricted the data to only the current NBA season. They also used a different technique: a max entropy classifier. They argue that a max entropy classifier is appropriate for predicting NBA data for two reasons: the first is because it does not assume features are conditionally independent (which would be a mistake for NBA statistics), and second, because max entropy classifiers tend to perform well in situations with smaller number of samples (once again the case with NBA statistics). The methodology in their experiment was to use the stats of two NBA teams from the regular season of a given year  as features and then label the data with the results of the playoff matchup between those two teams for the same year. This approach seems more logical than what is was presented by Jones, because the personnel of a given team may change from season to season and so data from prior NBA seasons may not be of use for predicting an NBA playoff outcome. For example, it would not make sense to use the Golden State Warriors' dominant 2014-2018 seasons---where they maintained a win percentage of over 70\%---to predict the outcome of the 2019-2020 matches, where after sustaining multiple injuries and a change of roster, the Warriors struggled to maintain a win percentage of 23\%. In regards to the stats Chang et al. used, they decided to only use 14 rudimentary team stats (points, assists, steals, blocks, field goal percentages, etc. ).
+To further the discussion of relevant game statistics, a third paper, ``Identifying Basketball Performance Indicators in Regular Season and Playoff Games" \cite{IdentifyingBasketballPerformanceIndicatorsinRegularSeasonandPlayoffGames}, found that in regular season NBA games, the most important indicators of team victory was dominance in assists, defensive rebounds,  and successful 2 and 3-point field-goals. However, in the NBA playoffs, they found that the only strong indicator was defensive rebounding. The importance of defensive rebounding is corroborated by the work in ``Relative importance of performance factors in winning NBA games" \cite{RelativeImportanceofPerformanceFactorsinWinningNBAGamesinRegularSeasonversusPlayoffs}, and the authors offer an important potential explanation for this: in the playoffs, the two competing teams likely have similar shooting efficiency. This insight could be important for our work, as there will likely be matchups where a conceptual ``tiebreaker" is needed to increase the accuracy of the prediction, and this stat is evidently a candidate.
 
-
-It is not sufficient to summarize each prior work independently.  You need to describe a coherent story that incorporates all of these prior work together.  Compare and contrast them.  Try to describe a story of how researchers have explored the topic in the past and what progress they have made so far.  
-
-Explain how your work is going to build on these prior work, i.e. how your work is similar to or different from the techniques that have been used.  
-
-The length of this section is typically 1/2 to 1 page.
-\\ \\
-Sources so far:
-\\
-\begin{enumerate}
-\item
-\href{https://www.researchgate.net/publication/312236952_Predicting_the_Outcome_of_NBA_Playoffs_Based_on_the_Maximum_Entropy_Principle}{Predicting the Outcome of NBA Playoffs Based on the Maximum Entropy Principle}
-
-\item \href{https://www.statista.com/statistics/240377/nba-finals-tv-viewership-in-the-united-states/}{https://www.statista.com/statistics/240377/nba-finals-tv-viewership-in-the-united-states/}
-\item \href{https://howmuch.net/articles/sports-leagues-by-revenue}{https://howmuch.net/articles/sports-leagues-by-revenue}
-\item \href{https://www.legalsportsreport.com/sports-betting/revenue/}{https://www.legalsportsreport.com/sports-betting/revenue/}
-
-\end{enumerate}
-\
 %%%%%%%%%. Methodology %%%%%%%%%
 
 \section{Methodology}
 
-In any given NBA matchup, numerous factors come into play to influence the game and its end result. To account for all these factors, we will be obtaining team and player data from website (\href{https://www.basketball-reference.com/}{Basketball Reference}). This data will then be used to train our models. { \it Which algorithms are we using to train the models? Need 2. Why are we using these two? What is the performance of them? }  Finally, we will compare the accuracy of the two techniques using a subset of past NBA games not used for training.
+Firstly, we intend to scrape data from https://www.basketball-reference.com/ in order to get the data we need to train our models which we will accomplish by using/customizing to our needs, an open source API we found online. We will then look into how we can attempt to formulate our data so as to account for the many factors that can affect the winner of a game of NBA basketball. Finally we will look through some pre-implemented ML algorithms (most likely ones provided by Tensorflow as some of the group members have used Tensorflow before) and select 2-4 that we will train using the same data and compare on how well they predict the outcomes. We believe that the implementation of this project will be relatively straight forward. 
 
 %%%%%%%%%. Results %%%%%%%%%
 
 \section{Results}
 
-Based on the papers we’ve read online, it seems at though none of the models have been able to predict NBA outcomes with an accuracy of much more than 75\%. We do not anticipate to be able to predict outcomes with super high accuracy, but what we do hope to discover is if there is a certain type of algorithm that can train a model that is significantly better at predicting NBA outcomes than others based on the same input data.
+Based on the papers we have read online, it seems at though none of the models have been able to predict NBA outcomes with an accuracy of much more than 75\%. We do not anticipate to be able to predict outcomes with super high accuracy, but what we do hope to discover is if there is a certain type of algorithm that can train a model that is significantly better at predicting NBA outcomes than others based on the same input data.
 
 %%%%%%%%%. Bibliography %%%%%%%%%
 \newpage
